@@ -669,7 +669,7 @@ public class SuspensionAnalysisChart : PerformanceChart
 
 			m_error = dataLogger.NewChannel("Error");
 			m_error.color = GColor.gray;
-			m_error.SetOriginAndSpan(10.0f, 6.0f, 5.0f);
+			m_error.SetOriginAndSpan(10.0f, 6.0f, 0.5f);
 			m_error.valueFormat = "0.00";
 			m_error.captionPositionY = 1;
 
@@ -854,7 +854,8 @@ public class AerodynamicsChart : PerformanceChart
 		DataLogger.Channel m_frontRideHeight;
 		DataLogger.Channel m_rearRideHeight;
 
-		Perrinn424Aerodynamics m_aero = new Perrinn424Aerodynamics();
+		Perrinn424Aerodynamics m_aero;
+
 
 		public override string Title()
 		{
